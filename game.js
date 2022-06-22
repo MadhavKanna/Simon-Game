@@ -15,6 +15,16 @@ $(document).keypress(function() {
   }
 });
 
+$(document).click(function(){
+  if (started === false){
+    $("#level-title").text("Level " + level);
+    setTimeout(function(){
+      nextSequence()
+    }, 1000);
+    started = true;
+  }
+});
+
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
