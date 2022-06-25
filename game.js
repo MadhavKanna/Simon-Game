@@ -12,16 +12,20 @@ $(document).keypress(function() {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
+    $("#rules").css("display", "none");
+    $(".btn").css("display", "inline-flex");
   }
 });
 
 $(document).click(function(){
-  if (started === false){
+  if (!started){
     $("#level-title").text("Level " + level);
     setTimeout(function(){
       nextSequence()
     }, 1000);
     started = true;
+    $("#rules").css("display", "none");
+    $(".btn").css("display", "inline-flex");
   }
 });
 
